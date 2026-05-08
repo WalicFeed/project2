@@ -1,0 +1,16 @@
+-- database: ./main.db
+
+-- Use the ▷ button in the top right corner to run the entire file.
+
+SELECT * FROM tasks;
+
+CREATE TABLE IF NOT EXISTS test(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    name TEXT NOT NULL,
+    number INTEGER NOT NULL
+);
+
+INSERT INTO test (name, number) VALUES ('test1', 123);
+INSERT INTO test (name, number) VALUES ('test2', 456);
+
+UPDATE test SET number = 789 WHERE name = 'test1';
