@@ -19,8 +19,6 @@ def main(page: ft.Page):
         def delete_task(e):
             main_db.delete_task(task_id)
             task_list.controls.remove(task_row)
-            page.update()
-
         
         save_button = ft.IconButton(icon=ft.Icons.SAVE, on_click=save_task)
         task_field = ft.TextField(read_only=True, value=task_text, expand=True)
@@ -36,7 +34,6 @@ def main(page: ft.Page):
             print(f"Task {task} added with ID: {task_id}")
             task_list.controls.append(view_tasks(task_id = task_id, task_text = task))
             task_input.value = ""
-            page.update()
 
     task_input = ft.TextField(label="Your task: ", expand=True)
     task_button = ft.IconButton(icon=ft.Icons.ADD, on_click=add_task)
