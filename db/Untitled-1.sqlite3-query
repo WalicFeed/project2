@@ -14,3 +14,7 @@ INSERT INTO test (name, number) VALUES ('test1', 123);
 INSERT INTO test (name, number) VALUES ('test2', 456);
 
 UPDATE test SET number = 789 WHERE name = 'test1';
+
+DELETE FROM test WHERE name = 'test2';
+
+DROP TABLE test;
